@@ -12,22 +12,22 @@ spring:
     sampler:
     probability: 1.0
   #Cambiando el hostname por el que levanta el docker-compose.yml
-  zipkin:
-    baseUrl: http://zipkin:9411/zipkin
-    enabled: true
+  #zipkin:
+  #  baseUrl: http://zipkin:9411/zipkin
+  #  enabled: true
   # db -> Se modifico el hostname y las contraseñas que previamente setee dentro del contenedor que builde dentro del docker-compose.yml
   datasource:
-    url: jdbc:mysql://db-mysql:3406/movies 
+    url: jdbc:mysql://db-mysql:3406 
     username: user
     password: 12345
-  rabbitmq:
-    host: rabbit-mq 
-    port: 5672
-    username: guest
-    password: guest
-queue:
-  movie:
-    name: queueMovie
+  #rabbitmq:
+  #  host: rabbit-mq 
+  #  port: 5672
+  #  username: guest
+  #  password: guest
+#queue:
+#  movie:
+#    name: queueMovie
 eureka:
   client:
     service-url:
