@@ -1,0 +1,64 @@
+server:
+  port : 8082
+spring:
+  application:
+    name: catalog-service
+  sleuth:
+    sampler:
+    probability: 1.0
+  zipkin:
+    baseUrl: http://localhost:9411/
+    enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+queue:
+  movie:
+    name: queueMovie
+  serie:
+    name: queueSerie
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka 
+    fetch-registry: true
+    register-with-eureka: true
+
+#Configuracion de Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: circuitbreakers,circuitbreakerevents,health,info
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+
+#Configuración de Circuit Breaker
+resilience4j:
+  circuitbreaker:
+    instances:
+      catalogGenre:
+        allowHealthIndicatorToFail: false
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 5000
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true  
+#Configuración del mecanismo de reintentos
+  retry:
+    instances:
+      catalogGenre:
+        maxAttempts: 3
+        waitDuration: 3000
+
+
