@@ -17,7 +17,7 @@ spring:
     enabled: true
   # db -> Se modifico el hostname y las contraseñas que previamente setee dentro del contenedor que builde dentro del docker-compose.yml
   datasource:
-    url: jdbc:mysql://db-mysql:3306/movies 
+    url: jdbc:mysql://db-mysql:3406/movies 
     username: user
     password: 12345
   rabbitmq:
