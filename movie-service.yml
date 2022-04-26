@@ -9,9 +9,9 @@ spring:
         dialect: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
     datasource:
-    url: jdbc:mysql://db-mysql:3406 
-    username: user
-    password: 12345
+      url: jdbc:mysql://db-mysql:3406 
+      username: user
+      password: 12345
   sleuth:
     sampler:
     probability: 1.0
