@@ -1,15 +1,15 @@
 server:
   port : 8081
 spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration 
   jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
     hibernate:
       ddl-auto: create-drop
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://db-mysql:3306/backendExamen
     username: user
     password: 12345
