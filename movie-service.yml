@@ -2,7 +2,6 @@ server:
   port : 8081
 spring:
   jpa:
-    deferDatasourceInitialization: true
     database-platform: org.hibernate.dialect.MySQL5Dialect
     hibernate:
       ddl-auto: create-drop
