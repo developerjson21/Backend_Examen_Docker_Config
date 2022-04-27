@@ -10,7 +10,7 @@ spring:
     show-sql: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://db-mysql:3306/backendExamen
+    url: jdbc:mysql://db-mysql:3307/backendExamen
     username: user
     password: 12345
   sleuth:
