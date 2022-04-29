@@ -9,25 +9,26 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://db-mysql:3306/backendExamen
-    username: root
-    password: root
+    username: user
+    password: 12345
+
   sleuth:
     sampler:
     probability: 1.0
   #Cambiando el hostname por el que levanta el docker-compose.yml
-  #zipkin:
-  #  baseUrl: http://zipkin:9411/zipkin
-  #  enabled: true
+  zipkin:
+    baseUrl: http://zipkin:9411/zipkin
+    enabled: true
   # db -> Se modifico el hostname y las contraseñas que previamente setee dentro del contenedor que builde dentro del docker-compose.yml
   
-  #rabbitmq:
-  #  host: rabbit-mq 
-  #  port: 5672
-  #  username: guest
-  #  password: guest
-#queue:
-#  movie:
-#    name: queueMovie
+  rabbitmq:
+    host: rabbit-mq 
+    port: 5672
+    username: guest
+    password: guest
+queue:
+  movie:
+    name: queueMovie
 eureka:
   client:
     service-url:
