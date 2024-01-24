@@ -3,7 +3,7 @@ server:
 spring:
   application:
     name: gateway-service
-3525 4587 1547 5698
+ip: 127454951
 prueba32@gmail.com
   security:
     oauth2:
