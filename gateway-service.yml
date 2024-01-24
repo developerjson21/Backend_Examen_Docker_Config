@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: gateway-service
+3525 4587 1547 5698
+prueba32@gmail.com
   security:
     oauth2:
       client:
@@ -67,5 +69,3 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://eureka-server:8761/eureka
-3525 4587 1547 5698
-prueba32@gmail.com
