@@ -1,7 +1,5 @@
 server:
   port:8080
-  ip: 127.0.0.1
-  email: prueba32@gmail.com
 spring:
   application:
     name: gateway-service
@@ -69,3 +67,5 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://eureka-server:8761/eureka
+3525 4587 1547 5698
+prueba32@gmail.com
