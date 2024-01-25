@@ -3,8 +3,6 @@ server:
 spring:
   application:
     name: gateway-service
-127.0.0.1
-prueba32@gmail.com
   security:
     oauth2:
       client:
