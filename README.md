@@ -2,5 +2,3 @@
 
 Configuraciones para Docker-Compose
 
-127.0.0.1
-
